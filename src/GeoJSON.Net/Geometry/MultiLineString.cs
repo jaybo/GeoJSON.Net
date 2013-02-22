@@ -7,29 +7,28 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
 namespace GeoJSON.Net.Geometry
 {
-    using System.Collections.Generic;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// Defines the <see cref="http://geojson.org/geojson-spec.html#multilinestring">MultiLineString</see> type.
+    ///     Defines the <see cref="http://geojson.org/geojson-spec.html#multilinestring">MultiLineString</see> type.
     /// </summary>
     public class MultiLineString : GeoJSONObject, IGeometryObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MultiLineString"/> class.
+        ///     Initializes a new instance of the <see cref="MultiLineString" /> class.
         /// </summary>
         /// <param name="coordinates">The coordinates.</param>
         public MultiLineString(List<LineString> coordinates)
         {
-            this.Coordinates = coordinates ?? new List<LineString>();
-            this.Type = GeoJSONObjectType.MultiLineString;
+            Coordinates = coordinates ?? new List<LineString>();
+            Type = GeoJSONObjectType.MultiLineString;
         }
-        
+
         /// <summary>
-        /// Gets the Coordinates.
+        ///     Gets the Coordinates.
         /// </summary>
         /// <value>The Coordinates.</value>
         [JsonProperty(PropertyName = "coordinates", Required = Required.Always)]

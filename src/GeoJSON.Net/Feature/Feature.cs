@@ -7,55 +7,57 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+using GeoJSON.Net.Geometry;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace GeoJSON.Net.Feature
 {
-    using System.Collections.Generic;
-
-    using GeoJSON.Net.Converters;
-    using GeoJSON.Net.Geometry;
-
-    using Newtonsoft.Json;
-
     /// <summary>
-    /// A GeoJSON <see cref="http://geojson.org/geojson-spec.html#feature-objects">Feature Object</see>.
+    ///     A GeoJSON <see cref="http://geojson.org/geojson-spec.html#feature-objects">Feature Object</see>.
     /// </summary>
     public class Feature : GeoJSONObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Feature"/> class.
+        ///     Initializes a new instance of the <see cref="Feature" /> class.
         /// </summary>
         /// <param name="geometry">The Geometry Object.</param>
         /// <param name="properties">The properties.</param>
         public Feature(IGeometryObject geometry, Dictionary<string, object> properties = null)
         {
-            this.Geometry = geometry;
-            this.Properties = properties;
+            Geometry = geometry;
 
-            this.Type = GeoJSONObjectType.Feature;
+            Properties = properties;
+
+            Type = GeoJSONObjectType.Feature;
         }
 
         /// <summary>
-        /// Gets or sets the id.
+        ///     Gets or sets the id.
         /// </summary>
         /// <value>The handle.</value>
-        [JsonProperty(PropertyName = "id")]
+        [JsonProperty(PropertyName = "id", Order = 10)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the geometry.
+        ///     Gets or sets the geometry.
         /// </summary>
         /// <value>
-        /// The geometry.
+        ///     The geometry.
         /// </value>
-        [JsonProperty(PropertyName = "geometry", Required = Required.AllowNull)]
-        [JsonConverter(typeof(GeometryConverter))]
+        [JsonProperty(PropertyName = "geometry", Required = Required.AllowNull, Order = 1)]
+        //[JsonConverter(typeof(GeometryConverter))]
         public IGeometryObject Geometry { get; set; }
-        
+
         /// <summary>
-        /// Gets the properties.
+        ///     Gets the properties.
         /// </summary>
         /// <value>The properties.</value>
-        [JsonProperty(PropertyName = "properties", Required = Required.AllowNull)]
+        [JsonProperty(PropertyName = "properties", Required = Required.AllowNull, Order = 2)]
         public Dictionary<string, object> Properties { get; private set; }
+
+        [JsonProperty(PropertyName = "type", Required = Required.Always, Order = 0, ItemConverterType = typeof(StringEnumConverter))]
+        public GeoJSONObjectType Type { get; internal set; }
     }
 }
