@@ -9,7 +9,6 @@
 
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace GeoJSON.Net.Feature
 {
@@ -35,8 +34,5 @@ namespace GeoJSON.Net.Feature
         /// <value>The features.</value>
         [JsonProperty(PropertyName = "features", Required = Required.Always)]
         public List<Feature> Features { get; private set; }
-
-        [JsonProperty(PropertyName = "type", Required = Required.Always, Order = 0, ItemConverterType = typeof(StringEnumConverter))]
-        public GeoJSONObjectType Type { get; internal set; }
     }
 }
