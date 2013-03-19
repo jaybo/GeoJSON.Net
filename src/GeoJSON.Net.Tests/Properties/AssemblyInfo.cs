@@ -18,9 +18,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © Jörg Battermann 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
 [assembly: ComVisible(false)]
-
 [assembly: AssemblyVersion("0.0.0.1")]
-
 [assembly: Guid("94688f28-e983-417d-8e6e-96d4c687e085")]
