@@ -29,7 +29,14 @@ namespace GeoJSON.Net.Converters
         /// <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter"/> to write to.</param><param name="value">The value.</param><param name="serializer">The calling serializer.</param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            if (value is List<IPosition>)
+            {
+                var position = value as List<IPosition>;
+                writer.WriteStartArray();
+                writer.WriteValue((position[0] as GeographicPosition).Longitude);
+                writer.WriteValue((position[0] as GeographicPosition).Latitude);
+                writer.WriteEndArray();
+            }
         }
 
         /// <summary>
