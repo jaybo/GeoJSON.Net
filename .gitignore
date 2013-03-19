@@ -1,0 +1,4 @@
+#NuGet
+packages/
+*.nupkg
+lib/*
