@@ -23,7 +23,7 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
         ///     Gets the type of the GeometryObject object.
         /// </summary>
         [JsonProperty(PropertyName = "type", Required = Required.Always)]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof (StringEnumConverter))]
         public CRSType Type { get; internal set; }
 
         /// <summary>

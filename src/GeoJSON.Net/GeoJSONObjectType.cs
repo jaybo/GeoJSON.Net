@@ -60,7 +60,8 @@ namespace GeoJSON.Net
         Feature,
 
         /// <summary>
-        ///     Defines the <see cref="http://geojson.org/geojson-spec.html#feature-collection-objects">FeatureCollection</see> type.
+        ///     Defines the <see cref="http://geojson.org/geojson-spec.html#feature-collection-objects">FeatureCollection</see>
+        ///     type.
         /// </summary>
         FeatureCollection
     }

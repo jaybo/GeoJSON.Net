@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
+﻿using System.Globalization;
 using GeoJSON.Net.CoordinateReferenceSystem;
 using GeoJSON.Net.Geometry;
 using NUnit.Framework;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace GeoJSON.Net.Tests
 {

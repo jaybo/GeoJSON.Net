@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using GeoJSON.Net.Converters;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace GeoJSON.Net.Geometry
 {
@@ -33,9 +32,9 @@ namespace GeoJSON.Net.Geometry
             }
 
             Coordinates = new List<IPosition>
-            {
-                coordinates
-            };
+                {
+                    coordinates
+                };
 
             Type = GeoJSONObjectType.Point;
         }

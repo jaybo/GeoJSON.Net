@@ -22,6 +22,8 @@ namespace GeoJSON.Net.Exceptions
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
         public ParsingException(string message = "Could not parse GeoJSON Response.", Exception innerException = null)
-            : base(message, innerException) {}
+            : base(message, innerException)
+        {
+        }
     }
 }

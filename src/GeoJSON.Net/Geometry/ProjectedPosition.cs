@@ -13,7 +13,8 @@ using System.Globalization;
 namespace GeoJSON.Net.Geometry
 {
     /// <summary>
-    ///     Defines the Projected Position type a.k.a. <see cref="http://geojson.org/geojson-spec.html#positions">Projected Coordinate Reference System</see>.
+    ///     Defines the Projected Position type a.k.a.
+    ///     <see cref="http://geojson.org/geojson-spec.html#positions">Projected Coordinate Reference System</see>.
     /// </summary>
     public class ProjectedPosition : Position
     {

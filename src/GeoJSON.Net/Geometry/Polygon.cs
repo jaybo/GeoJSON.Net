@@ -16,7 +16,8 @@ namespace GeoJSON.Net.Geometry
 {
     /// <summary>
     ///     Defines the <see cref="http://geojson.org/geojson-spec.html#polygon">Polygon</see> type.
-    ///     Coordinates of a Polygon are a list of <see cref="http://geojson.org/geojson-spec.html#linestring">linear rings</see>
+    ///     Coordinates of a Polygon are a list of
+    ///     <see cref="http://geojson.org/geojson-spec.html#linestring">linear rings</see>
     ///     coordinate arrays. The first element in the array represents the exterior ring. Any subsequent elements
     ///     represent interior rings (or holes).
     /// </summary>

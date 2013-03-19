@@ -38,11 +38,11 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
             }
 
             Properties = new Dictionary<string, object>
-            {
                 {
-                    "name", name
-                }
-            };
+                    {
+                        "name", name
+                    }
+                };
 
             Type = CRSType.Name;
         }

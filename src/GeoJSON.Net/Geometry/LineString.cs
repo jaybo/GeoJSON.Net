@@ -50,7 +50,8 @@ namespace GeoJSON.Net.Geometry
         public List<IPosition> Coordinates { get; private set; }
 
         /// <summary>
-        ///     Determines whether this LineString is a <see cref="http://geojson.org/geojson-spec.html#linestring">LinearRing</see>.
+        ///     Determines whether this LineString is a
+        ///     <see cref="http://geojson.org/geojson-spec.html#linestring">LinearRing</see>.
         /// </summary>
         /// <returns>
         ///     <c>true</c> if it is a linear ring; otherwise, <c>false</c>.

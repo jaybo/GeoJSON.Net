@@ -71,16 +71,17 @@ namespace GeoJSON.Net.Converters
             {
                 longitude = coordinates.First.ToString();
                 latitude = coordinates.Last.ToString();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new ParsingException(
                     "Could not parse GeoJSON Response. (Latitude or Longitude missing from Point geometry?)", ex);
             }
 
             return new List<IPosition>
-            {
-                new GeographicPosition(latitude, longitude)
-            };
+                {
+                    new GeographicPosition(latitude, longitude)
+                };
         }
 
         /// <summary>

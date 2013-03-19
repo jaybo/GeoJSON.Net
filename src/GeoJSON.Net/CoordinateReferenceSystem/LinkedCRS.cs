@@ -21,7 +21,8 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
         ///     Initializes a new instance of the <see cref="LinkedCRS" /> class.
         /// </summary>
         /// <param name="href">
-        ///     The mandatory <see cref="http://geojson.org/geojson-spec.html#linked-crs">href</see> member must be a dereferenceable URI.
+        ///     The mandatory <see cref="http://geojson.org/geojson-spec.html#linked-crs">href</see> member must be a
+        ///     dereferenceable URI.
         /// </param>
         /// <param name="type">
         ///     The optional type member will be put in the properties Dictionary as specified in the
@@ -44,11 +45,11 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
             }
 
             Properties = new Dictionary<string, object>
-            {
                 {
-                    "href", href
-                }
-            };
+                    {
+                        "href", href
+                    }
+                };
 
             if (!string.IsNullOrWhiteSpace(type))
             {
@@ -62,7 +63,8 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
         ///     Initializes a new instance of the <see cref="LinkedCRS" /> class.
         /// </summary>
         /// <param name="href">
-        ///     The mandatory <see cref="http://geojson.org/geojson-spec.html#linked-crs">href</see> member must be a dereferenceable URI.
+        ///     The mandatory <see cref="http://geojson.org/geojson-spec.html#linked-crs">href</see> member must be a
+        ///     dereferenceable URI.
         /// </param>
         /// <param name="type">
         ///     The optional type member will be put in the properties Dictionary as specified in the
@@ -72,6 +74,8 @@ namespace GeoJSON.Net.CoordinateReferenceSystem
         ///     </see>
         ///     .
         /// </param>
-        public LinkedCRS(Uri href, string type = "") : this(href.ToString(), type) {}
+        public LinkedCRS(Uri href, string type = "") : this(href.ToString(), type)
+        {
+        }
     }
 }
